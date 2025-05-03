@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MEDIA PAGE</title>
+  <style>
+    * {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      scroll-behavior: smooth;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    header {
+      background: rgba(0, 0, 0, 0.9);
+      height: 100px;
+      border-radius: 0 0 15px 15px;
+      display: flex;
+      align-items: center;
+      padding-left: 60px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    header > h1 {
+      color: #ffffff;
+      font-size: 30px;
+      letter-spacing: 1px;
+    }
+
+    main > h2 {
+      text-align: center;
+      font-size: 34px;
+      color: #ffffff;
+      margin: 50px auto 20px auto;
+      background-color: rgba(0, 0, 0, 0.6);
+      width: fit-content;
+      padding: 16px 32px;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.6);
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 30px;
+      gap: 30px;
+    }
+
+    .country-card {
+      background: rgba(255, 255, 255, 0.88);
+      border-radius: 15px;
+      overflow: hidden;
+      width: 260px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+    }
+
+    .country-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 25px rgba(0,0,0,0.4);
+    }
+
+    .country-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .country-card p {
+      padding: 12px;
+      text-align: center;
+      font-weight: bold;
+      color: #222;
+      font-size: 15px;
+    }
+
+    .VCONT {
+      padding: 40px 20px;
+      background: rgba(0, 0, 0, 0.8);
+      border-radius: 25px 25px 0 0;
+      margin-top: 60px;
+    }
+
+    .VCONT > h3 {
+      font-size: 22px;
+      color: #fff;
+      border-left: 6px solid #00f7ff;
+      padding-left: 14px;
+      margin: 25px 0 10px 60px;
+    }
+
+    iframe {
+      display: block;
+      margin: 15px auto 35px auto;
+      border: 5px solid #00f7ff;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,255,255,0.4);
+      max-width: 90%;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🎧 MEDIA CENTER</h1>
+  </header>
+
+  <audio id="bg-music" autoplay loop>
+    <source src="media/background-music-calm-soft-334182.mp3" type="audio/mp3" />
+  </audio>
+
+  <main>
+    <h2>&lt🌐 Global Internet Infrastructure /&gt</h2>
+
+    <div class="gallery">
+      <div class="country-card">
+        <img src="media/Google_datacenter_charleroi.original.jpg" alt="USA DATACENTER" />
+        <p>🇺🇸 United States – Data Center</p>
+      </div>
+      <div class="country-card">
+        <img src="media/bb5254fc-95e4-46c9-9f22-be7f3fc1d130.jpeg" alt="CHINA 5G" />
+        <p>🇨🇳 China – 5G Network</p>
+      </div>
+      <div class="country-card">
+        <img src="media/images.jpeg" alt="JAPAN TCH" />
+        <p>🇯🇵 Japan – Advanced Tech Landscape</p>
+      </div>
+      <div class="country-card">
+        <img src="media/imagesgrmn.jpeg" alt="GERMANY DC" />
+        <p>🇩🇪 Germany – Datacenter Association</p>
+      </div>
+      <div class="country-card">
+        <img src="media/swedenecofrn.png" alt="SWEDEN GREEN" />
+        <p>🇸🇪 Sweden – Green Data Center</p>
+      </div>
+      <div class="country-card">
+        <img src="media/indiapp.png" alt="INDIA DG" />
+        <p>🇮🇳 India – Digital Infrastructure</p>
+      </div>
+    </div>
+
+    <section class="VCONT">
+      <h3>🎥 History of the Internet</h3>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/21eFwbb48sE" title="History of the Internet" allowfullscreen></iframe>
+
+      <h3>🎥 Middle East: AI, Data Centers & Next-Gen Internet</h3>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/NVU6dDOvyBY" title="AI & Internet in Middle East" allowfullscreen></iframe>
+    </section>
+  </main>
+
+  <script>
+    // Enable autoplay after user interaction (required by Chrome)
+    window.onload = function () {
+      window.addEventListener("click", function () {
+        const audio = document.getElementById("bg-music");
+        if (audio) audio.play().catch(err => console.log("Autoplay blocked:", err));
+      }, { once: true });
+    };
+  </script>
+
+</body>
+</html>
