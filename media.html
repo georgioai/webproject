@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="style11.css">
   <title>MEDIA PAGE</title>
   <style>
     * {
@@ -100,6 +101,31 @@
       box-shadow: 0 0 20px rgba(0,255,255,0.4);
       max-width: 90%;
     }
+    a{
+        text-decoration:none;
+        font-size:32px;
+        color:rgb(0, 0, 0);
+        margin: 70px 70px 120px 50px;
+        border:3px solid #00f7ff;
+        background-color:#00f7ff;
+        padding:9px;
+        border-radius:400px;
+
+        
+    }
+    .btnbot{
+        display:flex;
+        justify-content: right;
+        background: rgba(0, 0, 0, 0.8);
+        align-items: center;
+    }
+    .btnbot>a:hover::after{
+        content:"BACK ON TOP";
+        font-size:20px;
+        font-family:monospace;
+        transition:all 2s ease-in-out;
+
+    }
   </style>
 </head>
 <body>
@@ -149,6 +175,9 @@
       <h3>🎥 Middle East: AI, Data Centers & Next-Gen Internet</h3>
       <iframe width="560" height="315" src="https://www.youtube.com/embed/NVU6dDOvyBY" title="AI & Internet in Middle East" allowfullscreen></iframe>
     </section>
+    <div class="btnbot">
+        <a href="#top">↑</a>
+    </div>
   </main>
 
   <script>

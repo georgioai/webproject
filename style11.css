@@ -737,7 +737,7 @@ html, body {
 	#back{
 		width:50%;
 		height:250px;
-		background-color:;
+		background-color:0;
 		border-radius:100px;
 	}
 
