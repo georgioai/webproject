@@ -15,14 +15,14 @@ const submit = function(event)
 
     if(firstname=="")
     {
-        $("errorfn").textContent="\nERROR FIRSTNAME REQUIRED!";
+        $("errorfn").textContent=" ERROR FIRSTNAME REQUIRED!";
         errorfn.style.fontSize="12px";
         errorfn.style.fontFamily="monospace";
         errorfn.style.color="red";
         fnfield.style.border="2px solid red";
         flag=false;
     }else if(!isNaN(parseInt(firstname))){
-        $("errorfn").textContent="INPUT NOT VALID!";
+        $("errorfn").textContent=" INPUT NOT VALID!";
         errorfn.style.fontSize="12px";
         errorfn.style.fontFamily="monospace";
         errorfn.style.color="red";
@@ -32,14 +32,14 @@ const submit = function(event)
 
     if(lastname=="")
         {
-            $("errorln").textContent="ERROR LASTNAME REQUIRED!";
+            $("errorln").textContent=" ERROR LASTNAME REQUIRED!";
             errorln.style.fontSize="12px";
             errorln.style.fontFamily="monospace";
             errorln.style.color="red";
             lnfield.style.border="2px solid red";
             flag=false;
         }else if(!isNaN(parseInt(lastname))){
-            $("errorln").textContent="INPUT NOT VALID!";
+            $("errorln").textContent=" INPUT NOT VALID!";
             errorln.style.fontSize="12px";
             errorln.style.fontFamily="monospace";
             errorln.style.color="red";
@@ -49,7 +49,7 @@ const submit = function(event)
     
         if(emailv=="")
             {
-                $("errorem").textContent="ERROR EMAIL REQUIRED!";
+                $("errorem").textContent=" ERROR EMAIL REQUIRED!";
                 errorem.style.fontSize="12px";
                 errorem.style.fontFamily="monospace";
                 errorem.style.color="red";
@@ -59,7 +59,7 @@ const submit = function(event)
         
         if(!phnn=="" && isNaN(parseInt(phnn)))
         {
-            $("errorph").textContent="ONLY INTEGERS ARE VALID!";
+            $("errorph").textContent=" ONLY INTEGERS ARE VALID!";
             errorph.style.fontSize="12px";
             errorph.style.fontFamily="monospace";
             errorph.style.color="red";
@@ -69,7 +69,7 @@ const submit = function(event)
 
         if(msg=="")
             {
-                $("errorms").textContent="ERROR MESSAGE REQUIRED!";
+                $("errorms").textContent=" ERROR MESSAGE REQUIRED!";
                 errorms.style.fontSize="12px";
                 errorms.style.fontFamily="monospace";
                 errorms.style.color="red";
@@ -78,13 +78,12 @@ const submit = function(event)
             }
         
             if(flag){
-                $("greeting").textContent="THANK YOU! AN AGENT WILL BE WITH YOU SOON...";
+                $("greeting").textContent="THANK YOU "+firstname.toUpperCase()+" "+lastname.toUpperCase()+" ! AN AGENT WILL BE WITH YOU SOON...";
                 greeting.style.color="white";
+                reset();
             }
-            reset();
-
-
 }
+
 const reset = function(){
     fnfield.value="";
     lnfield.value="";
@@ -103,13 +102,13 @@ const reset = function(){
     $("errorms").textContent="*";
     errorms.style.color="black";
 
-    fnfield.style.border="2px solid black";
-    lnfield.style.border="2px solid black";
-    emailfield.style.border="2px solid black";
-    phnfield.style.border="2px solid black";
-    txtarfield.style.border="2px solid black";
+    fnfield.style.border="2px solid rgb(128, 125, 125)";
+    lnfield.style.border="2px solid rgb(128, 125, 125)";
+    emailfield.style.border="2px solid rgb(128, 125, 125)";
+    phnfield.style.border="2px solid rgb(128, 125, 125)";
+    txtarfield.style.border="2px solid rgb(128, 125, 125)";
 
-
+    $("fnfield").focus();
 
 
 

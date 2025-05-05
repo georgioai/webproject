@@ -3,15 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link rel="stylesheet" href="style11.css">
   <title>MEDIA PAGE</title>
   <style>
     * {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       scroll-behavior: smooth;
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+      
     }
 
     header {
@@ -101,7 +98,7 @@
       box-shadow: 0 0 20px rgba(0,255,255,0.4);
       max-width: 90%;
     }
-    a{
+    .btnbot a{
         text-decoration:none;
         font-size:32px;
         color:rgb(0, 0, 0);
@@ -126,6 +123,74 @@
         transition:all 2s ease-in-out;
 
     }
+    #sidebarToggle {
+    display: none;
+  }
+  
+  .toggle-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 40px;
+    color: grey;
+    cursor: pointer;
+    z-index: 100;       /* sit above the sidebar */
+    user-select: none;
+  }
+  
+  
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -220px;
+    width: 200px;
+    height: 1000px;
+    background: #000;
+    transition: left 0.3s ease-in-out;
+    z-index: 90;
+    padding-top: 60px; 
+  }
+  
+  /* slide it in when checked */
+  #sidebarToggle:checked ~ .sidebar {
+    left: 0;
+  }
+  
+  
+  .sidebar ul {
+    list-style: none;
+    
+  }
+  .sidebar h3{
+    color:grey;
+    border-left:2px solid grey;
+    padding:5px;
+    font-size:18px;
+    font-family:monospace;
+  }
+  
+  .sidebar a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    font-size: 21px;
+    margin-bottom:8px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    
+  }
+  
+  .sidebar a:hover {
+    border:1px solid rgb(70, 68, 68);
+    padding:5px;
+    border-radius:8px;
+    background: rgba(255,255,255,0.1);
+    text-align:center;
+    color:rgb(137, 129, 129);
+    transition-duration: 0.2s;
+    font-weight:bold;
+    
+  }
   </style>
 </head>
 <body>
@@ -189,6 +254,25 @@
       }, { once: true });
     };
   </script>
+  <input type="checkbox" id="sidebarToggle">
+
+  
+  <label for="sidebarToggle" class="toggle-btn" aria-label="Toggle navigation menu">
+    &#8942;
+  </label>
+
+  
+  <nav class="sidebar">
+    <ul>
+      <li><h3>GHADI & GEORGIO'S WEBSITE</h3></li>
+      <li><a href="bb.html" target="_blank">Home</a></li>
+      <li><a href="new1.html" target="_blank"> Arabic (ع)</a></li>
+      <li><a href="nee.html" target="_blank">Schedule</a></li>
+      <li><a href="cv.html" target="_blank">CV</a></li>
+      <li><a href="Research.html" target="_blank">Research</a></li>
+      <li><a href="contactus01.html" target="_blank">Contacts Us</a></li>
+    </ul>
+  </nav>
 
 </body>
 </html>
