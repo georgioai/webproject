@@ -112,10 +112,11 @@ html{
     border:3px solid black;
     background-color:black;
     width:950px;
-    height:180px;
+    height:185px;
     padding:50px;
     border-radius:20px;
     margin-top:20px;
+    margin-bottom:25px;
   }
   .question h3{
     margin-bottom:50px;
@@ -133,6 +134,7 @@ html{
     accent-color:grey;
     cursor:pointer;
   }
+  
   #btn1{
     margin-left:40px;
     margin-top:30px;
@@ -152,16 +154,25 @@ html{
   }
   .topsc a{
 
-    border:2px solid rgb(14, 14, 14);
-    background-color:rgb(14, 14, 14);
-    width:600px;
-    height:50px;
-    color:rgb(14, 14, 14);
-    padding:8px;
-    display:flex;
-    margin: auto;
+    float:right;
+    border:2px solid white;
+    border-radius:17px;
     text-decoration: none;
-    
+    color:white;
+    font-size:20px;
+    padding:12px;
+    margin-right:20px;
+    margin-bottom:20px;
   }
-
+  .topsc a:hover{
+    background-color:white;
+    color:black;
+  }
+@media screen and (max-width:600px)
+{
+    .question{
+        width:400px;
+       height:200px;
+    }
+}
   
