@@ -25,6 +25,9 @@ const submit = function(){
       else{
         $("pt1").textContent="❌ WRONG";
         pt1.style.color="red";
+        ans1.checked = true;
+        ans1.style.accentColor = "lightgreen";
+      
       }
 
     if(ans2.checked)
@@ -36,6 +39,8 @@ const submit = function(){
         else{
             $("pt2").textContent="❌ WRONG";
             pt2.style.color="red";
+            ans2.checked = true;
+            ans2.style.accentColor = "lightgreen";
         }
 
         if(ans3.checked)
@@ -47,6 +52,8 @@ const submit = function(){
             else{
                 $("pt3").textContent="❌ WRONG";
                 pt3.style.color="red";
+                ans3.checked = true;
+                ans3.style.accentColor = "lightgreen";
             }
 
             if(ans4.checked)
@@ -58,6 +65,8 @@ const submit = function(){
                 else{
                     $("pt4").textContent="❌ WRONG";
                     pt4.style.color="red";
+                    ans4.checked = true;
+                    ans4.style.accentColor = "lightgreen";
                 }
                 if(ans5.checked)
                     {
@@ -68,16 +77,21 @@ const submit = function(){
                     else{
                         $("pt5").textContent="❌ WRONG";
                         pt5.style.color="red";
+                        ans5.checked = true;
+                        ans5.style.accentColor = "lightgreen";
                     }
                     if(ans6.checked)
                         {
                             count+=10;
                             $("pt6").textContent="✅ CORRECT";
                             pt6.style.color="green";
+                            
                         }
                         else{
                             $("pt6").textContent="❌ WRONG";
                             pt6.style.color="red";
+                            ans6.checked = true;
+                            ans6.style.accentColor = "lightgreen";
                         }
                         if(ans7.checked)
                             {
@@ -88,6 +102,8 @@ const submit = function(){
                             else{
                                 $("pt7").textContent="❌ WRONG";
                                 pt7.style.color="red";
+                                ans7.checked = true;
+                                ans7.style.accentColor = "lightgreen";
                             }
                             if(ans8.checked)
                                 {
@@ -98,6 +114,8 @@ const submit = function(){
                                 else{
                                     $("pt8").textContent="❌ WRONG";
                                     pt8.style.color="red";
+                                    ans8.checked = true;
+                                    ans8.style.accentColor = "lightgreen";
                                 }
                                 if(ans9.checked)
                                     {
@@ -108,6 +126,8 @@ const submit = function(){
                                     else{
                                         $("pt9").textContent="❌ WRONG";
                                         pt9.style.color="red";
+                                        ans9.checked = true;
+                                        ans9.style.accentColor = "lightgreen";
                                     }
                                     if(ans10.checked)
                                         {
@@ -118,6 +138,8 @@ const submit = function(){
                                         else{
                                             $("pt10").textContent="❌ WRONG";
                                             pt10.style.color="red";
+                                            ans10.checked = true;
+                                            ans10.style.accentColor = "lightgreen";
                                         }
                         
                         $("score").textContent=count+"/100";

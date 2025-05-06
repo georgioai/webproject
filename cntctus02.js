@@ -5,6 +5,10 @@ const $ = function(id)
 
 const submit = function(event)
 {
+    /*TO KEEP THE VALIDATION ON THE SUBMIT BUTTON
+    - I ADDED THIS event.preventDefault() that catch the error
+    - Then in the window.onload I assigned the submit fct i did previously
+      getting the form's id, and .onsubmit*/
     event.preventDefault();
 
     const firstname = $("fnfield").value;
