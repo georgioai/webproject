@@ -42,10 +42,12 @@
     
 </style>
 <body>
-    
+    <!--code will be executed when form is submitted-->
+    <?php if (isset($_POST['form_submitted'])): ?> 
+
     <div class="window">
     <img src="media/icons8-checkmark.gif" width="80px" height="60px"><br>
-    <h1>Thank you your message have been submitted!</h1>
+    <h1>Thank you, your message have been submitted!</h1>
     <h3>An agent will get to you as soon as possible!</h3>
     <br><br><br>
     <p><i>You can review below your submitted information!</i></p>
@@ -61,6 +63,6 @@
     </div>
     
    
-    
+    <?php endif; ?> 
 </body>
 </html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUIZ</title>
+    <link rel="stylesheet" href="styleqz.css">
+</head>
+<header>
+    <img id="logo" src="media/FD25A206-8293-467E-BF73-82C22D34C5CD_1_201_a.jpeg" alt="LOGO" width="90px" height="50px">
+</header>
+<body>
+    <input type="checkbox" id="sidebarToggle">
+
+  
+  <label for="sidebarToggle" class="toggle-btn" aria-label="Toggle navigation menu">
+    &#8942;
+  </label>
+
+  
+  <nav class="sidebar">
+    <ul>
+      <li><h3>GHADI & GEORGIO'S WEBSITE</h3></li>
+      <li><a href="bb.html" target="_blank">Home</a></li>
+      <li><a href="new1.html" target="_blank"> Arabic (ع)</a></li>
+      <li><a href="nee.html" target="_blank">Schedule</a></li>
+      <li><a href="cv.html" target="_blank">CV</a></li>
+      <li><a href="Research.html" target="_blank">Research</a></li>
+      <li><a href="media.html" target="_blank">Media</a></li>
+      <li><a href="contactus01.html" target="_blank">Contact Us</a></li>
+      <li><a href="contactus02.html" target="_blank">Customer Support</a></li>
+    </ul>
+  </nav>
+<div class="quiz-welcome">
+  <h1>Quiz<span id="score"></span></h1>
+  <p><i>Following the knowledge you’ve earned on Internet Infrastructure, the History of the Web, and Internet Statistics for the Middle East and Lebanon, complete all ten multiple-choice questions to test your understanding. Your score will be displayed at the top when you're done. GOODLUCK!</i></p>
+</div>
+<form id="quiz-form" action="quiz02Action.php" method="post">
+    <div class="question">
+        <h3>1.Which of the following is a physical transmission medium used by the Internet?<span id="pt1">(10 points)</span></h3>
+        <input type="radio" name="q1" id="q1A">
+        <label for="q1A">Domain Name System (DNS)</label><br>
+
+        <input type="radio" name="q1" id="q1B">
+        <label for="q1B">Satellites</label><br>
+
+        <input type="radio" name="q1" id="q1C">
+        <label for="q1C">HyperText Transfer Protocol (HTTP)</label><br>
+
+        <input type="radio" name="q1" id="q1D">
+        <label for="q1D">Routers and switches</label>
+
+    </div>
+    <div class="question">
+        <h3>2.Which components are responsible for directing data traffic across networks?<span id="pt2">(10 points)</span></h3>
+        <input type="radio" name="q2" id="q2A">
+        <label for="q2A">Web browsers</label><br>
+
+        <input type="radio" name="q2" id="q2B">
+        <label for="q2B">HTML and CSS</label><br>
+
+        <input type="radio" name="q2" id="q2C">
+        <label for="q2C">Routers and switches</label><br>
+
+        <input type="radio" name="q2" id="q2D">
+        <label for="q2D">Fiber-optic cables and satellites</label>
+
+    </div>
+    <div class="question">
+        <h3>3.What does “DNS” stand for?<span id="pt3">(10 points)</span></h3>
+        <input type="radio" name="q3" id="q3A">
+        <label for="q3A">Digital Network Service</label><br>
+
+        <input type="radio" name="q3" id="q3B">
+        <label for="q3B">Domain Name System</label><br>
+
+        <input type="radio" name="q3" id="q3C">
+        <label for="q3C">Data Number Sequence</label><br>
+
+        <input type="radio" name="q3" id="q3D">
+        <label for="q3D">Dynamic Node Server</label>
+
+    </div>
+    <div class="question">
+        <h3>4.Which of these is part of the Internet’s security and identity-protection layer?<span id="pt4">(10 points)</span></h3>
+        <input type="radio" name="q4" id="q4A">
+        <label for="q4A">HyperText Markup Language (HTML)</label><br>
+
+        <input type="radio" name="q4" id="q4B">
+        <label for="q4B">HyperText Transfer Protocol (HTTP)</label><br>
+
+        <input type="radio" name="q4" id="q4C">
+        <label for="q4C">Protocols ensuring secure data exchange</label><br>
+
+        <input type="radio" name="q4" id="q4D">
+        <label for="q4D">Web browsers</label>
+
+    </div>
+    <div class="question">
+        <h3>5.Who invented the World Wide Web?<span id="pt5">(10 points)</span></h3>
+        <input type="radio" name="q5" id="q5A">
+        <label for="q5A">Vint Cerf</label><br>
+
+        <input type="radio" name="q5" id="q5B">
+        <label for="q5B">Sir Tim Berners-Lee</label><br>
+
+        <input type="radio" name="q5" id="q5C">
+        <label for="q5C">Marc Andreessen</label><br>
+
+        <input type="radio" name="q5" id="q5D">
+        <label for="q5D">Bill Gates</label>
+
+    </div>
+    <div class="question">
+        <h3>6.What does “HTML” stand for?<span id="pt6">(10 points)</span></h3>
+        <input type="radio" name="q6" id="q6A">
+        <label for="q6A">HyperText Markdown Language</label><br>
+
+        <input type="radio" name="q6" id="q6B">
+        <label for="q6B">HyperText Markup Language</label><br>
+
+        <input type="radio" name="q6" id="q6C">
+        <label for="q6C">HyperTool Markup Library</label><br>
+
+        <input type="radio" name="q6" id="q6D">
+        <label for="q6D">HyperText Modeling Language</label>
+
+    </div>
+    <div class="question">
+        <h3>7.What does “HTTP” stand for?<span id="pt7">(10 points)</span></h3>
+        <input type="radio" name="q7" id="q7A">
+        <label for="q7A">HyperText Transfer Protocol</label><br>
+
+        <input type="radio" name="q7" id="q7B">
+        <label for="q7B">HyperText Transmission Program</label><br>
+
+        <input type="radio" name="q7" id="q7C">
+        <label for="q7C">HyperTool Transport Protocol</label><br>
+
+        <input type="radio" name="q7" id="q7D">
+        <label for="q7D">HyperTransfer Transmission Protocol</label>
+
+    </div>
+    <div class="question">
+        <h3>8.Which Middle Eastern country has approximately 46.8 million Internet users?<span id="pt8">(10 points)</span></h3>
+        <input type="radio" name="q8" id="q8A">
+        <label for="q8A">Saudi Arabia</label><br>
+
+        <input type="radio" name="q8" id="q8B">
+        <label for="q8B">Lebanon</label><br>
+
+        <input type="radio" name="q8" id="q8C">
+        <label for="q8C">Iran</label><br>
+
+        <input type="radio" name="q8" id="q8D">
+        <label for="q8D">Egypt</label>
+
+    </div>
+    <div class="question">
+        <h3>9.Which country in the region has about 18.3 million Internet users?<span id="pt9">(10 points)</span></h3>
+        <input type="radio" name="q9" id="q9A">
+        <label for="q9A">Lebanon</label><br>
+
+        <input type="radio" name="q9" id="q9B">
+        <label for="q9B">Saudi Arabia</label><br>
+
+        <input type="radio" name="q9" id="q9C">
+        <label for="q9C">Jordan</label><br>
+
+        <input type="radio" name="q9" id="q9D">
+        <label for="q9D">Iran</label>
+
+    </div>
+    <div class="question">
+        <h3>10.What progress has Lebanon shown in recent years?<span id="pt10">(10 points)</span></h3>
+        <input type="radio" name="q10" id="q10A">
+        <label for="q10A">Increasing broadband penetration and mobile Internet adoption</label><br>
+
+        <input type="radio" name="q10" id="q10B">
+        <label for="q10B">Declining mobile-Internet usage despite more fiber</label><br>
+
+        <input type="radio" name="q10" id="q10C">
+        <label for="q10C">Shift from broadband to dial-up connections</label><br>
+
+        <input type="radio" name="q10" id="q10D">
+        <label for="q10D">Complete lack of infrastructure development</label>
+
+    </div>
+    <input type="submit" id="btn1">
+
+</form>
+    <script src="quizscrpt.js"></script>
+
+    <div class="topsc">
+    <a href="#top">⇧</a>
+</div>
+   
+</body>
+</html>

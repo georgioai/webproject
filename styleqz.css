@@ -101,7 +101,7 @@ html{
   #score{
     float:right;
   }
-  .quiz-form{
+  #quiz-form{
     margin-top:70px;
     margin-left:10px;
 
