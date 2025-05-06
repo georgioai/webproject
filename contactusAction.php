@@ -7,7 +7,7 @@
     <title>GREETING MESSAGE</title>
 </head>
 <style>
-    h1{
+    *{
         color:white;
     }
 </style>
