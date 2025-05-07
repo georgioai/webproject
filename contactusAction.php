@@ -65,7 +65,9 @@
    
     <?php endif; ?> 
 
-    <!--INSERT INTO DATABASE HERE-->
+                                     <!--INSERT INTO DATABASE HERE-->
+                                     
+
     <!--CREATE CONNECTION FIRST-->
     <?php $conn = new mysqli("localhost", "root", "root", "webproject");?>
 
