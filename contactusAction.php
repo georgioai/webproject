@@ -44,7 +44,7 @@
 <body>
     <!--code will be executed when form is submitted-->
     <?php if (isset($_POST['form_submitted'])): ?> 
-
+    
     <div class="window">
     <img src="media/icons8-checkmark.gif" width="80px" height="60px"><br>
     <h1>Thank you, your message have been submitted!</h1>
@@ -64,5 +64,45 @@
     
    
     <?php endif; ?> 
+
+    <!--INSERT INTO DATABASE HERE-->
+    <!--CREATE CONNECTION FIRST-->
+    <?php $conn = new mysqli("localhost", "root", "root", "webproject");?>
+
+    <?php
+$servername = "localhost";
+$username = "root";
+$password = "root";
+$dbname = "webproject";
+
+// Connect
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check
+if ($conn->connect_error) {
+  die("❌ Connection failed: " . $conn->connect_error);
+}
+
+// Get data from form
+$fname = $_POST['fnfield'];
+$lname = $_POST['lnfield'];
+$email = $_POST['emailfield'];
+$phone = $_POST['phnfield'];
+$message = $_POST['txtarfield'];
+
+// Prepare SQL insert QUERY
+$sql = "INSERT INTO ContactUS (fname, lname, email, phoneNb, message) 
+        VALUES ('$fname', '$lname', '$email', '$phone', '$message')";
+
+// Execute and check
+if ($conn->query($sql) === TRUE) {
+  echo "<h2 style='color:green;'>✅ Your message has been saved.</h2>";
+} else {
+  echo "❌ Error: " . $sql . "<br>" . $conn->error;
+}
+
+$conn->close();
+?>
+
 </body>
 </html>
