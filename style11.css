@@ -40,7 +40,11 @@
     }
 
     .gg-nav-links a:hover {
-      color: #b2dfdb;
+     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+	 transition: transform 5s ease;
+border-radius:5px;
+
+
     }
 
     .gg-main-section {
@@ -85,7 +89,9 @@
 
     .gg-social-icons a:hover {
       color: #388e3c;
-    }
+	 
+}
+    
 
     .gg-about-card {
       background: #ffffff;
@@ -142,7 +148,7 @@
 .custom-nav ul {
     list-style-type: none;
     padding: 0;
-    text-align: center; 
+    text-align: center !important; 
     margin: 0;
 }
 
@@ -250,30 +256,54 @@ main p {
     }
 }
 
-@media screen and (max-width: 767px) {
-    main {
-        padding: 10px;
+@media screen and (max-width:400px) {
+    .custom-nav {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
-    main h2 {
-        font-size: 22px;
+    .custom-nav nav {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .custom-nav ul {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .custom-nav ul li {
+        margin: 10px 0;
+        text-align: center;
     }
 
     .custom-nav ul a {
         font-size: 16px;
+        text-align: center;
+        width: 100%;
         display: block;
-        margin: 10px 0;
-    }
-
-    .body-arabic h1 {
-        font-size: 28px;
-    }
-
-    .up {
-        width: 70%;
-        padding: 12px;
     }
 }
+
+
+@media screen and (max-width: 390px) {
+    .custom-nav nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
 
   .body1{
       font-family: 'Helvetica Neue', sans-serif;
@@ -332,6 +362,11 @@ table:hover {
       table, thead, tbody, th, td, tr {
         display: block;
       }
+	  
+	  .body1 nav ul a{
+		  display:block;
+		  padding-bottom:10px;
+	  }
 
       th {
         display: none;
@@ -382,6 +417,7 @@ table:hover {
 		text-decoration:none;
 		color:#009688;
 		font-weight:bold;
+	
 	}
 	
 	.body1 nav ul a:hover{
@@ -397,9 +433,22 @@ table:hover {
 	@media (max-width: 599px) {
 		.body1 nav{
 			
-			
 			text-align:center;
 	}
+	.body1 nav ul a{
+		
+		padding-left:10px;
+		text-decoration:none;
+		color:#009688;
+$$$		font-weight:bold;
+     
+      
+      
+	
+	
+	}
+	
+	
 	}
 	
 	
@@ -475,7 +524,12 @@ table:hover {
 
     .resume ul {
         padding-left: 20px;
+		
     }
+	
+
+
+
 }
 
 .resume h1 {
@@ -737,7 +791,7 @@ html, body {
 	#back{
 		width:50%;
 		height:250px;
-		background-color:0;
+		background-color:;
 		border-radius:100px;
 	}
 
@@ -772,3 +826,7 @@ html, body {
 	text-decoration:none;
 	color:green;
 }
+
+
+
+
