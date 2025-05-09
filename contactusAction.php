@@ -65,8 +65,8 @@
    
     <?php endif; ?> 
 
-                                     <!--INSERT INTO DATABASE HERE-->
-                                     
+                             <!--INSERT INTO  THE LOCAL (MySQL WORKBENCH and phpMyAdmin) DATABASE HERE-->
+
 
     <!--CREATE CONNECTION FIRST-->
     <?php $conn = new mysqli("localhost", "root", "root", "webproject");?>
@@ -101,6 +101,44 @@ if ($conn->query($sql) === TRUE) {
   echo "<h2 style='color:green;'>✅ Your message has been saved.</h2>";
 } else {
   echo "❌ Error: " . $sql . "<br>" . $conn->error;
+}
+
+$conn->close();
+?>
+
+              <!--INSERT INTO ONLINE phpMyAdmin DATABASE HERE-
+                           (infinityfree.com)-->  
+
+<?php
+
+$servername = "sql205.infinityfree.com";
+$username = "if0_38936062";
+$password = "cs3311gGHabG98"; 
+$dbname = "if0_38936062_webproject";
+
+// connection also here, like before 
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// DATA 
+$fname = $_POST['fnfield'];
+$lname = $_POST['lnfield'];
+$email = $_POST['emailfield'];
+$phone = $_POST['phnfield'];
+$message = $_POST['txtarfield'];
+
+// INSERT INTO , like preparing the statement here
+$sql = "INSERT INTO ContactUS (fname, lname, email, phoneNb, message)
+        VALUES ('$fname', '$lname', '$email', '$phoneNb', '$message')";
+
+if ($conn->query($sql) === TRUE) {
+    echo "Thank you for contacting us, $fname! Your message has been received.";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
 }
 
 $conn->close();
