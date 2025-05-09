@@ -133,7 +133,7 @@ $message = $_POST['txtarfield'];
 
 // INSERT INTO , like preparing the statement here
 $sql = "INSERT INTO ContactUS (fname, lname, email, phoneNb, message)
-        VALUES ('$fname', '$lname', '$email', '$phoneNb', '$message')";
+        VALUES ('$fname', '$lname', '$email', '$phone', '$message')";
 
 if ($conn->query($sql) === TRUE) {
     echo "Thank you for contacting us, $fname! Your message has been received.";
